@@ -1,17 +1,26 @@
 import "./Question.css"
 
-export default function Question() {
+export default function Question({ trivia }) {
+  const {
+    category,
+    correct_answer,
+    difficulty,
+    incorrect_answers,
+    question,
+    type
+  } = trivia
 
+  const choices = [incorrect_answers, ...incorrect_answers]
+
+  console.log(choices)
+  
   return (
     <article className="question">
-        <p>Category</p>
-        <p>Type</p>
-        <p>This is a trivia question</p>
+        <p>{category}</p>
+        <p>{type}</p>
+        <p>{question}</p>
         <ul className="choices">
-          <li>Choice 1</li>
-          <li>Choice 2</li>
-          <li>Choice 3</li>
-          <li>Choice 4</li>
+          
         </ul>
       </article>
   )
