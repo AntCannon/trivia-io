@@ -21,7 +21,10 @@ export default function Question({ trivia }) {
       <p>{category}</p>
       <p>{type}</p>
       <p>{question}</p>
-      <Choices choices={choices} />
+      <Choices
+        choices={choices}
+        correctAnswer={correct_answer}
+      />
       <div>
         <p>HP: {hP} / {choices.length}</p>
       </div>
