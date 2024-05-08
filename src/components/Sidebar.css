@@ -1,0 +1,9 @@
+.sidebar {
+  height: fit-content;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.sidebar * {
+  margin: 10px 0;
+}
