@@ -5,7 +5,12 @@ export default function Choice({
   handleSelect
 }) {
 
-  
+  function handleAttack(e) {
+    const t = e.target
+    t.disabled = true
+    t.classList.add("disabled")
+    handleSelect(e)
+  } 
 
   return (
     <li>
@@ -14,7 +19,8 @@ export default function Choice({
         name={choice}
         type="button"
         value={choice}
-        onClick={handleSelect}
+        onClick={handleAttack}
+        readOnly
         >
         {choice}
       </button>
