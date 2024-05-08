@@ -1,5 +1,8 @@
 nav {
+  height: 50px;
+  background: slategray;
   display: flex;
   justify-content: right;
+  align-items: center;
   gap: 20px;
 }
