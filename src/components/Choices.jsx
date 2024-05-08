@@ -1,4 +1,5 @@
 import "./Choices.css"
+import { useState } from "react"
 import Choice from "./Choice.jsx"
 
 export default function Choices({
@@ -6,7 +7,9 @@ export default function Choices({
   handleSelect
 }) {
   
-  if (choices.length === 4) {
+  const [ isShuffled, setIsShuffled ] = useState(false)
+
+  if (choices.length === 4  && !isShuffled) {
     const spread = [...choices]
     const randomizedChoices = []
     for (let i = 0; i < 4; i++) {
@@ -14,6 +17,7 @@ export default function Choices({
       randomizedChoices.push(spread.splice(randomN, 1)[0])
     }
     choices = randomizedChoices
+    setIsShuffled(true)
   }
 
   return (

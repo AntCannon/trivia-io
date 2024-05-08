@@ -14,7 +14,6 @@ export default function Question({ trivia }) {
   } = trivia
   
   const choices = [correct_answer, ...incorrect_answers]
-  
   const [ hP, setHP ] = useState(choices.length)
 
   function handleSelect(e) {
@@ -35,7 +34,6 @@ export default function Question({ trivia }) {
       t.parentNode.parentNode.parentNode.classList.add("defeated")
     }
   }
-
   checkHP(t)
   
   return (
