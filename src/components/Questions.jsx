@@ -20,7 +20,7 @@ export default function Questions() {
   return (
     <section className="questions-container">
       {questions.map( (trivia, i) => (
-        <Question trivia={trivia} key={i} />
+        <Question id={trivia.question} trivia={trivia} key={i} />
       ))
       }
     </section>

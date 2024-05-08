@@ -1,8 +1,9 @@
 import "./Question.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Choices from "./Choices.jsx"
 
 export default function Question({ trivia }) {
+  const [ t, setT ] = useState(null)
   const {
     category,
     correct_answer,
@@ -17,14 +18,25 @@ export default function Question({ trivia }) {
   const [ hP, setHP ] = useState(choices.length)
 
   function handleSelect(e) {
-    const t = e.target
+    setT(e.target)
     const value = t.value
 
+    // hp
     if (value != correct_answer) {
       setHP(hP - 1)
+    } else {
+      setHP(0)
     }
-
   } 
+
+  // check hp
+  function checkHP(t) {
+    if (!hP) {
+      t.parentNode.parentNode.parentNode.classList.add("defeated")
+    }
+  }
+
+  checkHP(t)
   
   return (
     <article className="question">
