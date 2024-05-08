@@ -1,0 +1,60 @@
+[
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Entertainment: Video Games",
+    "question": " Which of these champions from the MOBA &#039;League of Legends&#039; is NOT a Yordle?",
+    "correct_answer": "Annie",
+    "incorrect_answers": [
+      "Veigar",
+      "Tristana",
+      "Lulu"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "easy",
+    "category": "Politics",
+    "question": "Denmark has a monarch.",
+    "correct_answer": "True",
+    "incorrect_answers": [
+      "False"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "hard",
+    "category": "Mythology",
+    "question": "According to Algonquian folklore, how does one transform into a Wendigo?",
+    "correct_answer": "Participating in cannibalism.",
+    "incorrect_answers": [
+      "Excessive mutilation of animal corpses.",
+      "Performing a ritual involving murder.",
+      "Drinking the blood of many slain animals."
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "hard",
+    "category": "Entertainment: Television",
+    "question": "What was the UK &quot;Who Wants to be a Millionaire?&quot; cheating scandal known as?",
+    "correct_answer": "Major Fraud",
+    "incorrect_answers": [
+      "Ingram Cheater",
+      "Coughing Major",
+      "Millionaire Crime"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "hard",
+    "category": "General Knowledge",
+    "question": "Sciophobia is the fear of what?",
+    "correct_answer": "Shadows",
+    "incorrect_answers": [
+      "Eating",
+      "Bright lights",
+      "Transportation"
+    ]
+  }
+]
