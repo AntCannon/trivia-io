@@ -1,0 +1,6 @@
+.question {
+  height: fit-content;
+  min-width: 260px;
+  border: 1px solid black;
+  padding: 20px;
+}
