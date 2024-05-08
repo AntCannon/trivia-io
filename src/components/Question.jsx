@@ -1,6 +1,6 @@
 import "./Question.css"
 import { useState } from "react"
-import Choice from "./Choice.jsx"
+import Choices from "./Choices.jsx"
 
 export default function Question({ trivia }) {
   const {
@@ -21,12 +21,10 @@ export default function Question({ trivia }) {
       <p>{category}</p>
       <p>{type}</p>
       <p>{question}</p>
-      <ul className="choices">
-        {choices.map((choice, i) => (
-          <Choice choice={choice} key={i} />
-        ))
-        }
-      </ul>
+      <Choices
+        choices={choices}
+        correctAnswer={correct_answer}
+      />
       <div>
         <p>HP: {hP} / {choices.length}</p>
       </div>

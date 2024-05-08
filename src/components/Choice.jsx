@@ -3,8 +3,13 @@ import "./Choice.css"
 export default function Choice({ choice }) {
 
   return (
-    <li className="choice">
-      {choice}
+    <li>
+      <button
+        className="choice"
+        type="button"
+        value={choice}>
+        {choice}
+      </button>
     </li>
   )
 }
