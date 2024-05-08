@@ -4,6 +4,7 @@ import Nav from './components/Nav.jsx'
 import Filters from './components/Filters.jsx'
 import Stats from './components/Stats.jsx'
 import Questions from './components/Questions.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Filters />
       <Stats />
       <Questions />
+      <Footer />
     </>
   )
 }
