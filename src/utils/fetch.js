@@ -7,6 +7,7 @@ const URL = import.meta.env.VITE_API_BASE_URL
 // get questions 
 
 export function getQuestions() {
-  return fetch(`${URL}`)
+  const encoding = "encode!=[urlLegacy,base64,url3986]"
+  return fetch(`${URL}&${encoding}`)
     .then(response => response.json())
 }
