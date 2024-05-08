@@ -1,4 +1,6 @@
 import "./Question.css"
+import { useState } from "react"
+import Choice from "./Choice.jsx"
 
 export default function Question({ trivia }) {
   const {
@@ -9,10 +11,10 @@ export default function Question({ trivia }) {
     question,
     type
   } = trivia
-
-  const choices = [incorrect_answers, ...incorrect_answers]
-
-  console.log(choices)
+  
+  const choices = [correct_answer, ...incorrect_answers]
+  
+  const [ hP, setHP ] = useState(choices.length)
   
   return (
     <article className="question">
@@ -20,8 +22,14 @@ export default function Question({ trivia }) {
         <p>{type}</p>
         <p>{question}</p>
         <ul className="choices">
-          
+          {choices.map((choice, i) => (
+            <Choice choice={choice} key={i} />
+          ))
+          }
         </ul>
+        <div>
+          <p>HP: {hP} / {choices.length}</p>
+        </div>
       </article>
   )
 }

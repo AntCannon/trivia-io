@@ -1,5 +1,5 @@
 .question {
-  height: 250px;
+  height: fit-content;
   width: 260px;
   border: 1px solid black;
   padding: 20px;
