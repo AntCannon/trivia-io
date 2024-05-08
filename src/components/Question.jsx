@@ -15,6 +15,16 @@ export default function Question({ trivia }) {
   const choices = [correct_answer, ...incorrect_answers]
   
   const [ hP, setHP ] = useState(choices.length)
+
+  function handleSelect(e) {
+    const t = e.target
+    const value = t.value
+
+    if (value != correct_answer) {
+      setHP(hP - 1)
+    }
+
+  } 
   
   return (
     <article className="question">
@@ -23,7 +33,7 @@ export default function Question({ trivia }) {
       <p>{question}</p>
       <Choices
         choices={choices}
-        correctAnswer={correct_answer}
+        handleSelect ={handleSelect}
       />
       <div>
         <p>HP: {hP} / {choices.length}</p>

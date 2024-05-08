@@ -3,7 +3,7 @@ import Choice from "./Choice.jsx"
 
 export default function Choices({
   choices,
-  correctAnswer
+  handleSelect
 }) {
 
   return (
@@ -12,7 +12,7 @@ export default function Choices({
         <Choice
           choice={choice}
           key={i}
-          correctAnswer={correctAnswer}
+          handleSelect ={handleSelect}
         />
       ))
       }
