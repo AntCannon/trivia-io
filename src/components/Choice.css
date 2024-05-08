@@ -11,3 +11,7 @@ li {
   margin: 5px 0;
   cursor: pointer;
 }
+
+.disabled {
+  text-decoration: line-through;
+}

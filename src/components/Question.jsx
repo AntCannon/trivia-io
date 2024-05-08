@@ -19,7 +19,7 @@ export default function Question({ trivia }) {
 
   function handleSelect(e) {
     setT(e.target)
-    const value = t.value
+    const value = e.target.value
 
     // hp
     if (value != correct_answer) {
