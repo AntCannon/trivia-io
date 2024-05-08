@@ -1,3 +1,5 @@
+import "./Choice.css"
+
 export default function Choice({ choice }) {
 
   return (

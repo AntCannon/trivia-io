@@ -18,18 +18,18 @@ export default function Question({ trivia }) {
   
   return (
     <article className="question">
-        <p>{category}</p>
-        <p>{type}</p>
-        <p>{question}</p>
-        <ul className="choices">
-          {choices.map((choice, i) => (
-            <Choice choice={choice} key={i} />
-          ))
-          }
-        </ul>
-        <div>
-          <p>HP: {hP} / {choices.length}</p>
-        </div>
-      </article>
+      <p>{category}</p>
+      <p>{type}</p>
+      <p>{question}</p>
+      <ul className="choices">
+        {choices.map((choice, i) => (
+          <Choice choice={choice} key={i} />
+        ))
+        }
+      </ul>
+      <div>
+        <p>HP: {hP} / {choices.length}</p>
+      </div>
+    </article>
   )
 }
