@@ -6,7 +6,7 @@ export default function Choices({
   choices,
   handleSelect
 }) {
-  
+  const [ shuffledChoices, setShuffledChoices ] = useState(choices)
   const [ isShuffled, setIsShuffled ] = useState(false)
 
   if (choices.length === 4  && !isShuffled) {
@@ -16,13 +16,13 @@ export default function Choices({
       const randomN = Math.floor(Math.random()*spread.length)
       randomizedChoices.push(spread.splice(randomN, 1)[0])
     }
-    choices = randomizedChoices
+    setShuffledChoices(randomizedChoices)
     setIsShuffled(true)
   }
 
   return (
     <ul className="choices">
-      {choices.map((choice, i) => (
+      {shuffledChoices.map((choice, i) => (
           <Choice
             choice={choice}
             key={i}

@@ -2,12 +2,15 @@ import "./Sidebar.css";
 import Filters from './Filters.jsx';
 import Stats from './Stats.jsx';
 
-export default function Sidebar() {
+export default function Sidebar({ userHP, maxUserHP }) {
   
   return (
     <section className="sidebar">
       <Filters />
-      <Stats />
+      <Stats
+        userHP={userHP}
+        maxUserHP={maxUserHP}
+      />
     </section>
   )
 }

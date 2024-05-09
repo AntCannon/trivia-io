@@ -2,7 +2,7 @@ import "./Question.css"
 import { useState, useEffect } from "react"
 import Choices from "./Choices.jsx"
 
-export default function Question({ trivia }) {
+export default function Question({ trivia, userHP, setUserHP }) {
   const [ t, setT ] = useState(null)
   const {
     category,
@@ -23,6 +23,7 @@ export default function Question({ trivia }) {
     // hp
     if (value != correct_answer) {
       setHP(hP - 1)
+      setUserHP(userHP - 1)
     } else {
       setHP(0)
     }

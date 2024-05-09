@@ -4,7 +4,7 @@ import { getQuestions } from '../utils/fetch.js'
 import db from "../utils/db.json"
 import Question from "./Question.jsx"
 
-export default function Questions() {
+export default function Questions({ userHP, setUserHP }) {
   const [ questions, setQuestions ] = useState(db)
 
   // useEffect(() => {
@@ -22,7 +22,12 @@ export default function Questions() {
   return (
     <section className="questions-container">
       {questions.map( (trivia, i) => (
-        <Question id={trivia.question} trivia={trivia} key={i} />
+        <Question
+          id={trivia.question}
+          trivia={trivia}
+          userHP={userHP}
+          setUserHP={setUserHP}
+          key={i} />
       ))
       }
     </section>
