@@ -22,10 +22,18 @@ export default function Question({ trivia, userHP, setUserHP }) {
 
     // hp
     if (value != correct_answer) {
-      setHP(hP - 1)
-      setUserHP(userHP - 1)
+      if (hP > 0) {
+        setHP(hP - 1)
+        setUserHP(userHP - 1)
+      }
     } else {
       setHP(0)
+      const choiceList = e.target.parentNode.parentNode.children
+      for (let li of choiceList) {
+        const choice = li.querySelector("button")
+        choice.disabled = true
+        choice.classList.add("disabled")
+      }
     }
   } 
 
